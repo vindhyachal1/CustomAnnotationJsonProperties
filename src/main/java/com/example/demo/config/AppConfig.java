@@ -3,6 +3,7 @@ package com.example.demo.config;
 import com.example.demo.DeprecatedProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
@@ -13,6 +14,7 @@ import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.util.Map;
 
+@Data
 @Configuration
 @ConfigurationProperties(prefix = "app")
 public class AppConfig {
