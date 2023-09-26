@@ -20,7 +20,6 @@ public class AppConfigTest {
 
     @BeforeEach
     public void setUp() {
-        // You can customize the properties for your tests here if needed.
     }
 
     @Test
@@ -33,16 +32,10 @@ public class AppConfigTest {
     public void testDeprecatedPropertyWarning() {
         String description = appConfig.getDescription();
 
-        // Check if description is not null
         assertTrue(description != null);
 
-        // Check if the property is empty or null
         assertTrue(description.isEmpty() || description.isBlank());
 
-        // Check for the deprecated property warning message in the console
-        // You can customize this part based on your logging configuration
-        // In a real application, you would typically use a logging framework
-        // like SLF4J and capture log messages for testing.
         String consoleOutput = captureConsoleOutput(() -> {
             AppConfig deprecatedPropertyAppConfig = new AppConfig();
             deprecatedPropertyAppConfig.getDescription();
@@ -51,7 +44,6 @@ public class AppConfigTest {
         assertTrue(consoleOutput.contains("Warning: Property 'description' is deprecated."));
     }
 
-    // Utility method to capture console output
     private String captureConsoleOutput(Runnable action) {
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;

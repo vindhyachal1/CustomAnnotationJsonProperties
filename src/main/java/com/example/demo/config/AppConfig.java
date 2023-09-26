@@ -23,9 +23,6 @@ public class AppConfig {
     private String version;
     private String description;
 
-    // Constructor, getters, and setters
-
-    // Initialize properties from JSON file
     public AppConfig() {
         ObjectMapper objectMapper = new ObjectMapper();
         Resource resource = new ClassPathResource("application.json");
