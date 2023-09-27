@@ -1,8 +1,7 @@
 {
-  "app":
-  {
+  "app": {
     "name": "MyApp",
     "version": "1.0",
-    "description": "My Spring Boot App"
+    "test": "SomeDeprecatedValue"
   }
 }
